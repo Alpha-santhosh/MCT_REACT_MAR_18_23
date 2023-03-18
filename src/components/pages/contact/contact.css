@@ -1,0 +1,15 @@
+.contact {
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+  padding: 100px;
+  display: flex;
+}
+
+h2{
+    width: 100%;
+    text-align: center;
+    font-size: 29px;
+    color: red;
+    font-weight: 500;
+}

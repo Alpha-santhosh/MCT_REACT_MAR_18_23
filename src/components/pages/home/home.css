@@ -1,0 +1,45 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 17px;
+  color: #36b97e;
+}
+
+p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 48px;
+  color: #16252d;
+  text-align: center;
+}
+
+.em {
+  font-size: 15px;
+  padding: 8px 15px !important;
+  cursor: pointer;
+  background-color: #16252d;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.em:hover {
+  background-color: #39464d;
+}
