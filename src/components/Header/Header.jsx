@@ -42,7 +42,12 @@ function Header() {
             <li><Link className='a' onClick={() => { linkClicked("contact") }} to="contact" style={(linkStatus.contact) ? (linkStyle.active) : (linkStyle.notActive)}>Contact <span style={(linkStatus.contact) ? (linkStyle.dot) : (linkStyle.dotHidde)}></span></Link></li>
 
           </ul>
-          <button className='logout-btn'>Logout</button>
+          <button className='logout-btn' type='button' onClick={() => {
+            // window.location.reload()
+            console.log(window.location.href);
+            window.location.href = "http://localhost:3000/MCT_REACT_MAR_18_23/"
+            console.log("Logout");
+          }}>Logout</button>
         </nav>
       </header>
     </>

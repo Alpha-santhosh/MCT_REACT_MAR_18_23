@@ -6,7 +6,7 @@ function Home() {
     const { linkClicked } = useContext(GoblaData)
     useEffect(() => {
         console.log("Welcome to Home");
-        linkClicked("home")
+        linkClicked("home");
     }, [])
     return (
         <div className="home">
@@ -17,4 +17,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Home;
