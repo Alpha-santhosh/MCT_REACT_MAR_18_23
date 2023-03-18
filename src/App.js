@@ -1,12 +1,8 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Home from "./components/pages/home/Home";
-import Login from "./components/pages/login/Login";
-import Product from "./components/pages/products/Product";
-import User from "./components/pages/user/User";
-import ContactUs from "./components/pages/contact/ContactUs";
-import { Routes, Route } from "react-router-dom";
 import { createContext, useState } from "react";
+import Rout from "./Rout";
+import Header from "./components/Header/Header";
+import Login from "./components/pages/login/Login";
 
 export const GoblaData = createContext();
 
@@ -17,6 +13,8 @@ function App() {
     user: false,
     contact: false,
   });
+  const [loginState, setloginState] = useState(false);
+  window.localStorage.setItem("login", loginState);
 
   const linkClicked = (linkId) => {
     setLinkStatus(() => {
@@ -35,15 +33,16 @@ function App() {
     });
   };
   return (
-    <GoblaData.Provider value={{ linkClicked, linkStatus, setLinkStatus }}>
+    <GoblaData.Provider value={{ linkClicked, linkStatus, setLinkStatus,setloginState }}>
       <div className="app">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="product" element={<Product />} />
-          <Route path="user" element={<User />} />
-          <Route path="contact" element={<ContactUs />} />
-        </Routes>
+        {loginState ? (
+          <>
+            <Header />
+            <Rout />
+          </>
+        ) : (
+          <Login />
+        )}
       </div>
     </GoblaData.Provider>
   );

@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { GoblaData } from '../../App';
 import './header.css'
 
 function Header() {
-  const { linkClicked, linkStatus } = useContext(GoblaData);
+  const navigateto = useNavigate();
+  const { linkClicked, linkStatus, setloginState } = useContext(GoblaData);
   const linkStyle = {
     active: {
       color: "black"
@@ -22,6 +23,12 @@ function Header() {
     dotHidde: {
       display: "none"
     }
+  }
+
+  const handleLogout = () => {
+    console.log("handleLogout");
+    navigateto('/');
+    setloginState(false)
   }
 
   return (
@@ -42,12 +49,7 @@ function Header() {
             <li><Link className='a' onClick={() => { linkClicked("contact") }} to="contact" style={(linkStatus.contact) ? (linkStyle.active) : (linkStyle.notActive)}>Contact <span style={(linkStatus.contact) ? (linkStyle.dot) : (linkStyle.dotHidde)}></span></Link></li>
 
           </ul>
-          <button className='logout-btn' type='button' onClick={() => {
-            // window.location.reload()
-            console.log(window.location.href);
-            window.location.href = "http://localhost:3000/MCT_REACT_MAR_18_23/"
-            console.log("Logout");
-          }}>Logout</button>
+          <button className='logout-btn' type='button' onClick={handleLogout}>Logout</button>
         </nav>
       </header>
     </>
