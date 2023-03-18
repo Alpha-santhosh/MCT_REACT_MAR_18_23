@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MCT_REACT_MAR_18_23/static/css/main.2fa13cbc.css",
+    "main.js": "/MCT_REACT_MAR_18_23/static/js/main.75734650.js",
+    "index.html": "/MCT_REACT_MAR_18_23/index.html",
+    "main.2fa13cbc.css.map": "/MCT_REACT_MAR_18_23/static/css/main.2fa13cbc.css.map",
+    "main.75734650.js.map": "/MCT_REACT_MAR_18_23/static/js/main.75734650.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2fa13cbc.css",
+    "static/js/main.75734650.js"
+  ]
+}
