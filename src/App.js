@@ -1,5 +1,5 @@
 import "./App.css";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import Rout from "./Rout";
 import Header from "./components/Header/Header";
 import Login from "./components/pages/login/Login";
@@ -14,7 +14,6 @@ function App() {
     contact: false,
   });
   const [loginState, setloginState] = useState(false);
-  window.localStorage.setItem("login", loginState);
 
   const linkClicked = (linkId) => {
     setLinkStatus(() => {
@@ -33,9 +32,11 @@ function App() {
     });
   };
   return (
-    <GoblaData.Provider value={{ linkClicked, linkStatus, setLinkStatus,setloginState }}>
+    <GoblaData.Provider
+      value={{ linkClicked, linkStatus, setLinkStatus, setloginState }}
+    >
       <div className="app">
-        {loginState ? (
+        {true ? (
           <>
             <Header />
             <Rout />

@@ -1,13 +1,9 @@
-import React, { useContext, useEffect } from 'react'
-import { GoblaData } from '../../../App'
+import React from 'react'
+import { DotEffect } from '../../useeffect';
 import './home.css'
 
 function Home() {
-    const { linkClicked } = useContext(GoblaData)
-    useEffect(() => {
-        console.log("Welcome to Home");
-        linkClicked("home");
-    }, [])
+    DotEffect("home");
     return (
         <div className="home">
             <h1>Welcome to React</h1>

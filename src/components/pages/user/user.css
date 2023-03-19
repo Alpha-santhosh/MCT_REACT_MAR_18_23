@@ -1,0 +1,92 @@
+.user {
+  width: 100vw;
+  height: 100vh;
+  padding: 75px;
+}
+
+.h2-user {
+  background-color: #16252d;
+  color: white;
+}
+
+.p-user {
+  font-size: 14px;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.form-user {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.input-user {
+  width: max-content;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-card-container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transition: all 0.3s ease-in-out;
+  padding: 5px;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  background-color: #eaeaea;
+}
+
+img {
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.user-top-titles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topTitle {
+  background-color: #16252d;
+  width: 500px;
+  border-left: 2px solid white;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.urD {
+  width: 25%;
+  padding: 10px;
+  color: #16252d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 18px;
+  text-align: center;
+}

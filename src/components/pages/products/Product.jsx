@@ -1,14 +1,19 @@
-import React, { useContext, useEffect } from 'react'
-import { GoblaData } from '../../../App';
+import React from 'react'
+import { DotEffect } from '../../useeffect';
+import Nav from './Nav';
+import './product.css'
 
 function Product() {
-  const { linkClicked } = useContext(GoblaData)
-  useEffect(() => {
-    console.log("Welcome to products");
-    linkClicked("product")
-  }, [])
+  DotEffect("product");
   return (
-    <div>Product</div>
+    <div className="product">
+      <div className="product-container">
+        <Nav />
+        <div className="show-items-product">
+
+        </div>
+      </div>
+    </div>
   )
 }
 

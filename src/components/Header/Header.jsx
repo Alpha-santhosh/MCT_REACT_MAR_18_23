@@ -28,9 +28,10 @@ function Header() {
   const handleLogout = () => {
     console.log("handleLogout");
     navigateto('/');
+    window.localStorage.setItem("login", false)
     setloginState(false)
+    console.log("false");
   }
-
   return (
     <>
       <header>
