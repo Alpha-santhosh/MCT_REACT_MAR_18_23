@@ -28,7 +28,7 @@ function LoginForm() {
                 })} />
                 {errors.email && <p className='error-msg'>{errors.email.message}</p>}
 
-                <input type="text" placeholder='password *' {...register("password", {
+                <input type="password" placeholder='password *' {...register("password", {
                     required: "Password is required.",
                     minLength: {
                         value: 6,
