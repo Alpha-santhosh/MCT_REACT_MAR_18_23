@@ -33,10 +33,15 @@ function App() {
   };
   return (
     <GoblaData.Provider
-      value={{ linkClicked, linkStatus, setLinkStatus, setloginState }}
+      value={{
+        linkClicked,
+        linkStatus,
+        setLinkStatus,
+        setloginState,
+      }}
     >
       <div className="app">
-        {true ? (
+        {loginState ? (
           <>
             <Header />
             <Rout />
