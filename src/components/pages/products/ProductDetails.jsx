@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
 
 function ProductDetails() {
   const { productId } = useParams()
@@ -23,7 +22,7 @@ function ProductDetails() {
   return (
     <div className="pdd">
       <div className="selected_item_card" key={id}>
-        <h2 className='si_h2'>{selectedItem.category} Category</h2>
+        <h2 className='si_h2'>{category} Category</h2>
         <div className="si_content">
           <div className="si_img_holder">
             <img className='si_img' src={selectedItem.image} alt="" />
@@ -36,7 +35,7 @@ function ProductDetails() {
             <hr />
             <div className="pn"><span className='si_title'>Product Description</span> <br />{description}</div>
             <hr />
-            <div className="pn"><span className='si_title'>Product Rating</span> <br />{}</div>
+            <div className="pn"><span className='si_title'>Product Rating</span> <br />{ }</div>
             <hr />
           </div>
         </div>
